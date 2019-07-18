@@ -66,7 +66,7 @@ class Koala(DataFrame):
 		super().__init__(data)
 		
 		
-	def select(self,x,y):
+	def selection(self,x,y):
 		
 		if type(x) == type(int()) and type(y) == type(int()) and x < len(self.columns) and y < len(self.columns) and x >= 0 and y >= 0:
 			
@@ -108,7 +108,7 @@ class Koala(DataFrame):
 
 		"""
 		
-		x_name, y_name, x, y = self.select(x, y)
+		x_name, y_name, x, y = self.selection(x, y)
 		
 		l = np.polyfit(x,y,1)
 		a = l[0]
@@ -157,7 +157,7 @@ class Koala(DataFrame):
 
 		"""
 	
-		x_name, y_name, x, y = self.select(x, y)
+		x_name, y_name, x, y = self.selection(x, y)
 		
 		try: 
 			
@@ -213,7 +213,7 @@ class Koala(DataFrame):
 			AttrDict {'equation', 'R', 'a', 'b', 'f', 'r', 'graph'}
 		"""
 		
-		x_name, y_name, x, y = self.select(x, y)
+		x_name, y_name, x, y = self.selection(x, y)
 		
 		try:
 	
@@ -280,7 +280,7 @@ class Koala(DataFrame):
 		
 		
 		
-		x_name, y_name, x, y = self.select(X, Y)
+		x_name, y_name, x, y = self.selection(X, Y)
 		
 		if 0 in x or 0 in y:
 			
