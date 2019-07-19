@@ -31,7 +31,7 @@ if 'DISPLAY' not in os.environ:
 
 import numpy as np
 import matplotlib.pyplot as plt
-from pandas import *
+from pandas import DataFrame
 import attrdict
 import ipfshttpclient
 
