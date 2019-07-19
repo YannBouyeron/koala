@@ -104,7 +104,7 @@ class Koala(DataFrame):
 
 		Return:
 
-			AttrDict {'equation', 'R', 'a', 'b', 'f', 'r', 'graph'}
+			AttrDict {'a', 'b', 'r', 'equation', 'graph'}
 
 		"""
 		
@@ -114,9 +114,9 @@ class Koala(DataFrame):
 		a = l[0]
 		b = l[1]
 		cc = np.corrcoef(x,y)
-		R = cc[0,1]
-		f = 'y = '+str(round(a,2))+'x +' +str(round(b,2))
-		r = 'R = '+str(round(R,2))
+		r = cc[0,1]
+		f = 'y = '+ str(round(a,2)) + 'x + ' + str(round(b,2))
+		
 		
 		plt.close()
 		plt.plot(x, y, '^k', label='Original data', markersize=4)
@@ -136,7 +136,7 @@ class Koala(DataFrame):
 					
 					pass
 			
-		return attrdict.AttrDict({"equation": 'y = {0} x + {1}'.format(a, b), "R": R, "a":a, "b":b, "f":f, "r":r, "graph":plt})
+		return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
 	
 	
 	
@@ -153,7 +153,7 @@ class Koala(DataFrame):
 
 		Return:
 
-			AttrDict {'equation', 'R', 'a', 'b', 'f', 'r', 'graph'}
+			AttrDict {'a', 'b', 'r', 'equation', 'graph'}
 
 		"""
 	
@@ -167,10 +167,9 @@ class Koala(DataFrame):
 			a = np.exp(N)
 			b = p[0]
 			cc = np.corrcoef(x,Y)
-			R = cc[0,1]
-			f = 'y = '+ str(round(a,2))+'*exp('+str(round(b,2))+'x)'
-			r = 'R = '+ str(round(R,2))
-				
+			r = cc[0,1]
+			f = 'y = '+ str(round(a,2)) + ' *exp(' + str(round(b,2)) + 'x)'
+							
 			plt.close()
 			plt.plot(x, y, '^k', label='Original data', markersize=2)
 			plt.plot(x, [a*np.exp(b*i) for i in x], '--r', label='Fitted line - Exponential regression')
@@ -189,7 +188,7 @@ class Koala(DataFrame):
 					
 					pass
 				
-			return attrdict.AttrDict({"equation": 'y = {0} * exp(x*{1})'.format(a, b), "R": R, "a":a, "b":b, "f":f, "r":r, "graph":plt})
+			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
 		
 		except:
 			
@@ -210,7 +209,7 @@ class Koala(DataFrame):
 
 		Return:
 
-			AttrDict {'equation', 'R', 'a', 'b', 'f', 'r', 'graph'}
+			AttrDict {'a', 'b', 'r', 'equation', 'graph'}
 		"""
 		
 		x_name, y_name, x, y = self.selection(x, y)
@@ -224,10 +223,9 @@ class Koala(DataFrame):
 			a = np.exp(N)
 			b = p[0]
 			cc = np.corrcoef(X,Y)
-			R = cc[0,1]
-			f = 'y = '+str(round(a,2))+'*x^'+str(round(b,2))
-			r = 'R = '+str(round(R,2))
-			
+			r = cc[0,1]
+			f = 'y = '+ str(round(a,2))+' * x^' + str(round(b,2))
+					
 			plt.close()				
 			plt.plot(x, y, '^k', label='Original data', markersize=2)
 			plt.plot(x, a*(x**b), '--g', label='Fitted line - Regression puissance')
@@ -247,8 +245,8 @@ class Koala(DataFrame):
 					pass
 				
 			
-			return attrdict.AttrDict({"equation": 'y = {0} * x**{1}'.format(a, b), "R": R, "a":a, "b":b, "f":f, "r":r, "graph":plt})
-		
+			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
+	
 		except:
 			
 			return None
