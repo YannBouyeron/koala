@@ -14,10 +14,14 @@ Ce module hérite de pandas.DataFrame et permet de tester facilement et rapideme
     
 ## Exemple 1:
 
+On import les modules suivants:
+
     >>> import pandas as pd
     >>> import numpy as np
     >>> from koala import Koala
-    
+
+On crée 2 séries de données:
+
     >>> x = np.arange(20)
     >>> y = 2 * x + 8
 
@@ -29,6 +33,8 @@ Ce module hérite de pandas.DataFrame et permet de tester facilement et rapideme
     array([ 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40,
     42, 44, 46])
 
+On instancie un objet Koala:
+
     >>> kf = Koala({"abs":x, "ord":y})
     >>>
     >>> kf.head()
@@ -39,15 +45,18 @@ Ce module hérite de pandas.DataFrame et permet de tester facilement et rapideme
     3    3   14
     4    4   16
 
+On teste une régression linéaire:
+
     >>> lin = kf.lin("abs", "ord")
     
-
 
 <p align="center">
   <img src="Images/0D38B61D-9A9B-40F9-AAD2-1E20BC76A06D.png">
 </p>
 
-    
+
+On exploite l'objet Koala (variable lin) pour retrouver les inforamtions de la régression et légender le graphique:
+
     
     >>> lin
     AttrDict({'a': 1.9999999999999998, 'b': 8.000000000000002, 'r': 1.0, 'equation': 'y = 2.0x + 8.0', 'graph': <module 'matplotlib.pyplot' from '/usr/local/lib/python3.6/site-packages/matplotlib/pyplot.py'>})
@@ -77,6 +86,7 @@ Ce module hérite de pandas.DataFrame et permet de tester facilement et rapideme
 </p>
 
 
+On sauvegarde le graphique légendé:
 
     >>> plt.savefig("linplot.png")
 
