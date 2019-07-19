@@ -121,7 +121,7 @@ class Koala(DataFrame):
 		plt.close()
 		plt.plot(x, y, '^k', label='Original data', markersize=4)
 		plt.plot(x, [a*i + b for i in x], '--b', label='Fitted line - linear regression')
-		plt.title('{0} = f({1})'.format(y_name,x_name),fontsize=7)
+		plt.title('{0} = a * {1} + b'.format(y_name,x_name),fontsize=7)
 		plt.xlabel(x_name,fontsize=7)
 		plt.ylabel(y_name,fontsize=7)
 		plt.legend(fontsize=6)
