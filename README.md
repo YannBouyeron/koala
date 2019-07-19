@@ -1,6 +1,8 @@
 # Koala
 
-Pandas pour les SVT
+Un compagnon à Pandas pour les SVT.
+
+Ce module hérite de pandas.DataFrame et permet de tester facilement et rapidement des régressions linéaires, puissances, et exponentielles.
 
 ## Installation
 
