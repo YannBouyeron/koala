@@ -38,9 +38,17 @@ Pandas pour les SVT
     4    4   16
 
     >>> lin = kf.lin("abs", "ord")
-    >>>
+    
+
+
+<p align="center">
+  <img src="Images/ma_matrice.png">
+</p>
+
+    
+    
     >>> lin
-    AttrDict({'a': 1.9999999999999998, 'b': 8.000000000000002, 'r': 1.0, 'equation': 'y = 2.0x + 8.0', 'graph': <module 'matplotlib.pyplot' from '/usr/local/lib/python3.6/site-packages/matplotlib/pyplot.py'>})
+    AttrDict({'a': 1.9999999999999998, 'b': 8.000000000000002, 'r': 1.0, 'equation': 'y = 2.0x + 8.0', 'graph': <module 'matplotlib.pyplot' from '/usr/local/lib/python3.6/site-packages/matplotlib/pyplot.py'>})
     >>>
     >>> lin.a
     1.9999999999999998
@@ -52,10 +60,21 @@ Pandas pour les SVT
     'y = 2.0x + 8.0'
 
     >>> plt = lin.graph
+    
     >>> plt.text(7.5, 15, lin.equation, fontsize=8)
     Text(7.5,15,'y = 2.0x + 8.0')
+    
     >>> plt.text(7.5, 10, "R = " + str(lin.r), fontsize=8)
     Text(7.5,10,'R = 1.0')
+    
     >>> plt.show()
+
+
+<p align="center">
+  <img src="Images/ma_matrice.png">
+</p>
+
+
+
     >>> plt.savefig("linplot.png")
 
