@@ -1,5 +1,3 @@
-# test regressions lin exp et pow avec heritage de class DataFrame
-
 # Copyright (c) 2019 Yann BOUYERON
 #
 #
@@ -94,7 +92,7 @@ class Koala(DataFrame):
 		
 	def lin(self, x, y, show=True):
 		
-		"""Teste une régréssion lineaire.
+		"""Teste une régression linéaire.
 
 		Arguments:
 
@@ -143,7 +141,7 @@ class Koala(DataFrame):
 	def exp(self, x, y, show=True):
 
 		"""
-		Teste une régréssion exponentielle.
+		Teste une régression exponentielle.
 
 		Arguments:
 
@@ -199,7 +197,7 @@ class Koala(DataFrame):
 	def pwr(self, x, y ,show=True):
 
 		"""
-		Teste une régréssion puissance.
+		Teste une régression puissance.
 
 		Arguments:
 
