@@ -90,3 +90,8 @@ On sauvegarde le graphique légendé:
 
     >>> plt.savefig("linplot.png")
 
+
+## Exemple 2:
+
+[Etude de la correlation UV mélanomes avec pandas, geopandas et koala](https://gist.github.com/YannBouyeron/5e27cff8568725e71de245e10933bb56)
+
