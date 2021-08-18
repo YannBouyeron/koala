@@ -31,7 +31,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pandas import DataFrame
 import attrdict
-import ipfshttpclient
 
 __version__ = "0.0.1"
 
@@ -39,14 +38,6 @@ __author__ = "Yann Bouyeron"
 
 __all__ = ["Koala"]
 
-
-try:
-
-	ipfs = ipfshttpclient.connect('/dns/ipfs.infura.io/tcp/5001/https')
-
-except:
-
-	pass
 
 
 
