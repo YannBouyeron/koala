@@ -69,8 +69,6 @@ On exploite l'objet Koala (variable lin) pour retrouver les inforamtions de la r
     1.0
     >>> lin.equation
     'y = 2.0x + 8.0'
-
-    >>> plt = lin.graph
     
     >>> plt.text(7.5, 15, lin.equation, fontsize=8)
     Text(7.5,15,'y = 2.0x + 8.0')
