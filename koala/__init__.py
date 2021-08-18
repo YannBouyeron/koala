@@ -17,15 +17,15 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 
 
+#%matplotlib inline
 
+#import os
 
-import os
+#import matplotlib
 
-import matplotlib
-
-if 'DISPLAY' not in os.environ:
+#if 'DISPLAY' not in os.environ:
 	
-	matplotlib.use('Agg') 
+	#matplotlib.use('Agg') 
 
 import numpy as np
 import matplotlib.pyplot as plt
