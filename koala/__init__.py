@@ -45,9 +45,7 @@ class Koala(DataFrame):
 
 	""" 
 	Classe héritant de pandas.DataFrame
-
 	Les objets de cette classe s’instancient comme un DataFrame classique
-
       """
 	
 	def __init__(self, data):
@@ -84,17 +82,12 @@ class Koala(DataFrame):
 	def lin(self, x, y, show=True):
 		
 		"""Teste une régression linéaire.
-
 		Arguments:
-
 			x: nom [str] ou index [int] de colonne
 			y: nom [str] ou index [int] de colonne
 			show: [bool] , défaut=True, Si True, le graphique avec la droite de regression est affiché
-
 		Return:
-
 			AttrDict {'a', 'b', 'r', 'equation', 'graph'}
-
 		"""
 		
 		x_name, y_name, x, y = self.selection(x, y)
@@ -125,7 +118,7 @@ class Koala(DataFrame):
 					
 					pass
 			
-		return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f})
+		return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
 	
 	
 	
@@ -133,17 +126,12 @@ class Koala(DataFrame):
 
 		"""
 		Teste une régression exponentielle.
-
 		Arguments:
-
 			x: nom [str] ou index [int] de colonne
 			y: nom [str] ou index [int] de colonne
 			show: [bool] , défaut=True, Si True, le graphique avec la droite de regression est affiché
-
 		Return:
-
 			AttrDict {'a', 'b', 'r', 'equation', 'graph'}
-
 		"""
 	
 		x_name, y_name, x, y = self.selection(x, y)
@@ -177,7 +165,7 @@ class Koala(DataFrame):
 					
 					pass
 				
-			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f})
+			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
 		
 		except:
 			
@@ -189,15 +177,11 @@ class Koala(DataFrame):
 
 		"""
 		Teste une régression puissance.
-
 		Arguments:
-
 			x: nom [str] ou index [int] de colonne
 			y: nom [str] ou index [int] de colonne
 			show: [bool] , défaut=True, Si True, le graphique avec la droite de regression est affiché
-
 		Return:
-
 			AttrDict {'a', 'b', 'r', 'equation', 'graph'}
 		"""
 		
@@ -234,7 +218,7 @@ class Koala(DataFrame):
 					pass
 				
 			
-			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f})
+			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
 	
 		except:
 			
@@ -250,19 +234,13 @@ class Koala(DataFrame):
 	def reg(self, X, Y, show=True):
 
 		"""
-
 		Teste une régréssion puissance.
-
 		Arguments:
-
 			x: nom [str] ou index [int] de colonne
 			y: nom [str] ou index [int] de colonne
 			show: [bool] , défaut=True, Si True, le graphique avec la droite de regression est affiché
-
 		Return:
-
 			AttrDict {'plot', 'lin', 'exp', 'pwr', 'plt'}
-
 		"""
 		
 		
@@ -328,4 +306,4 @@ class Koala(DataFrame):
 		exp.graph = g3
 		pwr.graph = g4
 			
-		return attrdict.AttrDict({"plot":g1, "lin":lin, "exp":exp, "pwr":pwr})
+		return attrdict.AttrDict({"plot":g1, "lin":lin, "exp":exp, "pwr":pwr, "plt":plt})
