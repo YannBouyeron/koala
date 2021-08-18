@@ -125,7 +125,7 @@ class Koala(DataFrame):
 					
 					pass
 			
-		return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
+		return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f})
 	
 	
 	
@@ -177,7 +177,7 @@ class Koala(DataFrame):
 					
 					pass
 				
-			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
+			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f})
 		
 		except:
 			
@@ -234,7 +234,7 @@ class Koala(DataFrame):
 					pass
 				
 			
-			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f, "graph":plt})
+			return attrdict.AttrDict({"a":a, "b":b, "r":r, "equation":f})
 	
 		except:
 			
@@ -328,4 +328,4 @@ class Koala(DataFrame):
 		exp.graph = g3
 		pwr.graph = g4
 			
-		return attrdict.AttrDict({"plot":g1, "lin":lin, "exp":exp, "pwr":pwr, "plt":plt})
+		return attrdict.AttrDict({"plot":g1, "lin":lin, "exp":exp, "pwr":pwr})
