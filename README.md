@@ -65,7 +65,7 @@ On exploite l'objet Koala (variable lin) pour retrouver les inforamtions de la r
     1.9999999999999998
     >>> lin.b
     8.000000000000002
-    >>> lin.r
+    >>> lin.r # on récupère le coefficient de correlation
     1.0
     >>> lin.equation
     'y = 2.0x + 8.0'
